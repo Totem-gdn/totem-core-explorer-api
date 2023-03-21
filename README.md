@@ -6,9 +6,9 @@ the [Totem Core Explorer Backend](https://github.com/Totem-gdn/totem-core-explor
 ## Development
 
 1. Install dependencies:
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 2. Create [Redis](https://redis.io/docs/stack/get-started/install/docker/) in Docker, or use local variant.
 3. Create `.env` file from example `.env.sample` and fill in environment variables:
    ```dotenv
