@@ -1,6 +1,6 @@
 # Totem Core Explorer API
 
-Totem Core Explorer API service provide an API gateway for
+Totem Core Explorer API service provide an API gateway for 
 the [Totem Core Explorer Backend](https://github.com/Totem-gdn/totem-core-explorer-backend) service.
 
 ## Development
