@@ -34,4 +34,9 @@ export class AssetLegacyService implements OnModuleInit {
   async findById(request: FindByIdRequest): Promise<FindByIdResponse> {
     return await firstValueFrom<FindByIdResponse>(this.service.FindById(request));
   }
+
+  async gamesStatistics(gameAddress: string) {
+    const data = await firstValueFrom(this.service.GamesStatistics({ gameAddress }));
+    return data;
+  }
 }

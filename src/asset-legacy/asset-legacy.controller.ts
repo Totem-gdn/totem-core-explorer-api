@@ -30,6 +30,14 @@ import { legacyGamesAddresses, legacyGamesIds } from '../utils/temp/legacyGamesM
 export class AssetLegacyController {
   constructor(private service: AssetLegacyService) {}
 
+  @Get('statistics/:gameAddress')
+  @ApiOkResponse({
+    description: 'Count of items and avatars used in game',
+  })
+  async statistics(@Param('gameAddress') gameAddress: string) {
+    return await this.service.statistics(gameAddress);
+  }
+
   @Post(':assetType')
   @ApiParam({ name: 'assetType', enum: ['avatar', 'item', 'gem'] })
   @ApiCreatedResponse({

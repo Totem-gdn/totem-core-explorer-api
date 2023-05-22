@@ -50,4 +50,14 @@ export class AssetLegacyService {
       timestamp: record.timestamp.toNumber(),
     };
   }
+
+  async statistics(gameAddress: string) {
+    const results = await this.assetsLegacyService.gamesStatistics(gameAddress);
+
+    return {
+      ...results,
+      avatars: results.avatars.toNumber(),
+      items: results.items.toNumber(),
+    };
+  }
 }
