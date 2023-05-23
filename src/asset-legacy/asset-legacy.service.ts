@@ -58,6 +58,7 @@ export class AssetLegacyService {
       ...results,
       avatars: results.avatars.toNumber(),
       items: results.items.toNumber(),
+      users: results.users.toNumber(),
     };
   }
 }
