@@ -1,14 +1,14 @@
 # Totem Core Explorer API
 
-Totem Core Explorer API service provide an API gateway for
+Totem Core Explorer API service provide an API gateway for 
 the [Totem Core Explorer Backend](https://github.com/Totem-gdn/totem-core-explorer-backend) service.
 
 ## Development
 
 1. Install dependencies:
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 2. Create [Redis](https://redis.io/docs/stack/get-started/install/docker/) in Docker, or use local variant.
 3. Create `.env` file from example `.env.sample` and fill in environment variables:
    ```dotenv

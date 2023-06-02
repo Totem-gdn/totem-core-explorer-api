@@ -8,11 +8,19 @@ export class CreatePaymentLinkRequestDto {
   @IsNotEmpty()
   ownerAddress: string;
 
+  @ApiProperty({ description: 'asset preview image url', required: false })
+  imageUrl: string;
+
   @ApiProperty({
     description: 'the address to which the client will be redirected after successful payment',
     required: false,
   })
   successUrl: string;
+
+  @ApiProperty({
+    description: 'If true then you will be redirected after payment',
+  })
+  redirect: boolean;
 }
 
 export class CreatePaymentLinkResponseDto {

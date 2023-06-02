@@ -24,7 +24,13 @@ export class WithpaperController {
     @Param('assetType', new AssetTypePipe()) assetType: AssetType,
     @Body(new ValidationPipe({ transform: true, stopAtFirstError: true })) body: CreatePaymentLinkRequestDto,
   ) {
-    return await this.service.createPaymentLink(assetType, body.ownerAddress, body.successUrl);
+    return await this.service.createPaymentLink(
+      assetType,
+      body.ownerAddress,
+      body.successUrl,
+      body.imageUrl,
+      body.redirect,
+    );
   }
 
   @Post('withpaper/webhook')
